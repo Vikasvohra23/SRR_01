@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- Logo on left -->
+    <a class="navbar-brand" href="#">
+      <img src="img/Design.jpg" alt="Logo" height="60" />
+    </a>
+    <!-- Toggler button for tablet/mobile -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Centered nav links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#scrollto" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#domestic-relocation">Domestic Relocation</a></li>
+            <li><a class="dropdown-item" href="#international-relocation">International Relocation</a></li>
+            <li><a class="dropdown-item" href="#warehousing-services">Warehousing Services</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#worklink">Our Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="background-image: url('img/slide1.png')">
+      <div class="carousel-caption text-white text-center">
+        <h1>Bold Heading One</h1>
+        <p>First line of paragraph text goes here to describe slide one.</p>
+        <p>Second line of paragraph text continues the description.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('img/slide2.png')">
+      <div class="carousel-caption text-white text-center">
+        <h1>Bold Heading Two</h1>
+        <p>First line of paragraph text for slide two content.</p>
+        <p>Second line of paragraph text to complement the heading.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('img/slide3.png')">
+      <div class="carousel-caption text-white text-center">
+        <h1>Bold Heading Three</h1>
+        <p>First line of paragraph text for the third slide here.</p>
+        <p>Additional second line to expand on slide three's message.</p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section id="about" class="container py-5">
+  <div class="row align-items-center">
+    <!-- Left side: content & tabs -->
+    <div class="col-lg-6" data-aos="fade-right">
+      <span class="d-block mb-2 fw-bold text-uppercase" style="color:#ff7000; font-size:1.1rem;">
+        <span style="border-top:3px solid #ff7000; display:inline-block; width:32px; margin-right:8px; vertical-align:middle;"></span>
+        About Us
+      </span>
+      <h2 class="fw-bold mb-4" style="color:#143243; font-size:2.5rem;">Get to Know Our Story</h2>
+
+      <!-- Tabs -->
+   <ul class="nav nav-tabs mb-3" id="aboutTabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active fw-semibold" id="company-tab" data-bs-toggle="tab" data-bs-target="#company" type="button" role="tab" aria-controls="company" aria-selected="true">
+      Our Company
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link fw-semibold" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab" aria-controls="projects" aria-selected="false">
+      Our Projects
+    </button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link fw-semibold" id="blogs-tab" data-bs-toggle="tab" data-bs-target="#blogs" type="button" role="tab" aria-controls="blogs" aria-selected="false">
+      Blogs
+    </button>
+  </li>
+</ul>
+
+      <div class="tab-content mb-4" id="aboutTabsContent">
+        <div class="tab-pane fade show active" id="company" role="tabpanel" aria-labelledby="company-tab">
+          <p class="mb-3 text-muted" style="font-size:1.07rem;">
+            Shree Radhey Relocation Services is a recognized logistics company for imparting excellent services in packing and moving segments. While shifting, the only thought that worries you the most is the safety and care of your valuable belongings. Our determination and hard work made us today the foremost and unparallel service provider in the packing and moving industry.
+          </p>
+        </div>
+        <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+          <p class="mb-3 text-muted" style="font-size:1.07rem;">
+            Our diverse projects range from corporate moves to home shifting, all managed with professionalism and a personal touch, ensuring customer satisfaction every time.
+          </p>
+        </div>
+        <div class="tab-pane fade" id="blogs" role="tabpanel" aria-labelledby="blogs-tab">
+          <p class="mb-3 text-muted" style="font-size:1.07rem;">
+            Explore our blogs for the latest moving tips, company news, and stories about how we approach hassle-free relocation for homes and businesses.
+          </p>
+        </div>
+      </div>
+      <!-- Get Quote Button -->
+      <a href="#" class="btn btn-warning fw-bold px-4 py-2" style="font-size:1.1rem; background:#ff7000; border:none;">Get Quote</a>
+    </div>
+    <!-- Right side: image -->
+    <div class="col-lg-6 text-center" data-aos="fade-left">
+      <img src="img/about us.jpg" alt="About us" class="img-fluid rounded" style="max-width:90%; height:auto;">
+    </div>
+  </div>
+</section>
+
+<section id="scrollto" class="py-5" style="background:#fafafa">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="text-warning fw-bold" style="font-size:1.1rem">Services</span>
+      <h2 class="fw-bold display-5" style="color:#143243">Services We Provide</h2>
+    </div>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="card h-100 shadow-sm service-card">
+          <div class="position-relative">
+            <img src="img/card1.jpg" class="card-img-top" alt="Home Relocation">
+            <div class="service-icon d-flex align-items-center justify-content-center bg-warning position-absolute rounded-3" style="width:48px; height:48px; bottom:-24px; left:50%; transform:translateX(-50%)">
+              <img src="https://img.icons8.com/fluency/36/user-group-man-man.png" />
+            </div>
+          </div>
+          <div class="card-body pt-5">
+            <h5 class="fw-bold" style="color:#143243">Home Relocation</h5>
+            <p class="text-muted mb-2" style="font-size:1rem">We understand your concerns and requirements at the time of shifting your house. We also understand the emotions attached to your personal belongings. By our packing SOP (standard operating procedure) we make sure that your goods remain safe and you move fast and hassle-free.</p>
+            <a href="#" class="text-warning text-decoration-none fw-semibold">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="card h-100 shadow-sm service-card">
+          <div class="position-relative">
+            <img src="img/card2.jpg" class="card-img-top" alt="Car Loading">
+            <div class="service-icon d-flex align-items-center justify-content-center bg-warning position-absolute rounded-3" style="width:48px; height:48px; bottom:-24px; left:50%; transform:translateX(-50%)">
+              <img src="https://img.icons8.com/fluency/36/user-group-man-man.png" />
+            </div>
+          </div>
+          <div class="card-body pt-5">
+            <h5 class="fw-bold" style="color:#143243">Industrial Shifting</h5>
+            <p class="text-muted mb-2" style="font-size:1rem">Industrial movements are moreover risky regarding shifting a whole plant and need special attention while its execution. We specialize in these fields and provide the safest movement in this Industry at an unbelievably pocket-friendly cost; we have highly skilled and experienced employees to handle extreme situations & scenarios</p>
+            <a href="#" class="text-warning text-decoration-none fw-semibold">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 shadow-sm service-card">
+          <div class="position-relative">
+            <img src="img/card3.jpg" class="card-img-top" alt="Packing & Moving">
+            <div class="service-icon d-flex align-items-center justify-content-center bg-warning position-absolute rounded-3" style="width:48px; height:48px; bottom:-24px; left:50%; transform:translateX(-50%)">
+              <img src="https://img.icons8.com/fluency/36/user-group-man-man.png" />
+            </div>
+          </div>
+          <div class="card-body pt-5">
+            <h5 class="fw-bold" style="color:#143243">Packing of Antique Goods</h5>
+            <p class="text-muted mb-2" style="font-size:1rem">We now offer specialized Antique Goods Packing services, designed to ensure the utmost care and protection for your valuable and delicate antiques. Our expert team uses high-quality materials and tailored packing techniques to safeguard each item from damage during transit or storage. Whether it's vintage furniture, fragile ceramics, or rare collectibles, we handle every piece with precision and respect. Trust us to preserve the integrity and beauty of your antiques through our dedicated packing solutions.</p>
+            <a href="#" class="text-warning text-decoration-none fw-semibold">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="worklink" class="container py-5">
+  <!-- Heading -->
+  <h2 class="fw-bold text-center mb-4" style="font-size:2.4rem;">Look at Our Projects</h2>
+  <!-- Tabs -->
+  <ul class="nav nav-tabs justify-content-center border-0 mb-4" id="projectTab" role="tablist" style="gap:18px;">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active fw-bold border-0" id="tab-all" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" style="color:#262626; font-size:1rem;">All</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link fw-bold border-0" id="tab-app" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab" style="color:#262626; font-size:1rem;">App</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link fw-bold border-0" id="tab-brand" data-bs-toggle="tab" data-bs-target="#brand" type="button" role="tab" style="color:#262626; font-size:1rem;">Product Branding</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link fw-bold border-0" id="tab-books" data-bs-toggle="tab" data-bs-target="#books" type="button" role="tab" style="color:#262626; font-size:1rem;">Books</button>
+    </li>
+  </ul>
+  <!-- Tab content -->
+  <div class="tab-content">
+    <!-- All Tab -->
+    <div class="tab-pane fade show active" id="all" role="tabpanel">
+      <div class="row gy-4 justify-content-center">
+        <!-- First Row -->
+        <div class="col-12 d-flex justify-content-center project-row" style="gap:30px;">
+          <div class="project-thumb" style="margin-top:30px;">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Project 1" />
+            <div class="overlay">
+              <h6>Content Creation</h6><small>Graphics, Print</small>
+            </div>
+          </div>
+          <div class="project-thumb" style="margin-top:0;">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Project 2" />
+            <div class="overlay">
+              <h6>Tablet Interface</h6><small>App Design</small>
+            </div>
+          </div>
+          <div class="project-thumb" style="margin-top:30px;">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Project 3" />
+            <div class="overlay">
+              <h6>Management Panel</h6><small>UI/UX</small>
+            </div>
+          </div>
+        </div>
+        <!-- Second Row -->
+        <div class="col-12 d-flex justify-content-center project-row" style="gap:30px;">
+          <div class="project-thumb" style="margin-top:0;">
+            <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=400&q=80" alt="Project 4" />
+            <div class="overlay">
+              <h6>Design Think</h6><small>Branding</small>
+            </div>
+          </div>
+          <div class="project-thumb" style="margin-top:24px;">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Project 5" />
+            <div class="overlay">
+              <h6>Vision Workspace</h6><small>Productivity</small>
+            </div>
+          </div>
+          <div class="project-thumb" style="margin-top:0;">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Project 6" />
+            <div class="overlay">
+              <h6>Modern Desk</h6><small>Digital Setup</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- App Tab -->
+    <div class="tab-pane fade" id="app" role="tabpanel">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-12 d-flex justify-content-center project-row" style="gap:30px;">
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="App 1" />
+            <div class="overlay">
+              <h6>Tablet Interface</h6><small>App Design</small>
+            </div>
+          </div>
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="App 2" />
+            <div class="overlay">
+              <h6>Modern Desk</h6><small>Digital Setup</small>
+            </div>
+          </div>
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="App 3" />
+            <div class="overlay">
+              <h6>Management Panel</h6><small>UI/UX</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product Branding Tab -->
+    <div class="tab-pane fade" id="brand" role="tabpanel">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-12 d-flex justify-content-center project-row" style="gap:30px;">
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=400&q=80" alt="Brand 1" />
+            <div class="overlay">
+              <h6>Design Think</h6><small>Branding</small>
+            </div>
+          </div>
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Brand 2" />
+            <div class="overlay">
+              <h6>Portrait Campaign</h6><small>Brand Visuals</small>
+            </div>
+          </div>
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Brand 3" />
+            <div class="overlay">
+              <h6>Content Creation</h6><small>Graphics, Print</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Books Tab -->
+    <div class="tab-pane fade" id="books" role="tabpanel">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-12 d-flex justify-content-center project-row" style="gap:30px;">
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Book 1" />
+            <div class="overlay">
+              <h6>Modern Desk</h6><small>Digital Setup</small>
+            </div>
+          </div>
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Book 2" />
+            <div class="overlay">
+              <h6>Tablet Interface</h6><small>App Design</small>
+            </div>
+          </div>
+          <div class="project-thumb">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Book 3" />
+            <div class="overlay">
+              <h6>Vision Workspace</h6><small>Productivity</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose-section position-relative py-0">
+  <div class="container-fluid px-0">
+    <div class="row g-0 align-items-stretch min-vh-60" style="min-height:450px;">
+      <!-- Left: Image with animated black gradient overlay -->
+      <div class="col-lg-6 position-relative d-flex align-items-center justify-content-center why-bg-img">
+        <div class="animated-gradient position-absolute top-0 start-0 w-100 h-100"></div>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80" 
+          alt="container truck logistics" class="img-fluid w-100 h-100 object-fit-cover" style="min-height:450px; opacity:0.7;">
+      </div>
+      <!-- Right: Content -->
+      <div class="col-lg-6 d-flex align-items-center" style="background: #0b2840;">
+        <div class="p-5 w-100">
+          <h2 class="fw-bold mb-3 text-white" style="font-size:2.2rem;">Why You Choose Us?</h2>
+          <p class="mb-4 text-white-50 fs-5">
+            Our team of professional packers and movers are available 24x7 for our customers. We trained them especially to help you through the entire moving process.
+          </p>
+          <div class="row gy-4">
+            <!-- Feature 1 -->
+            <div class="col-12 d-flex">
+              <div class="iconbox flex-shrink-0 d-flex align-items-center justify-content-center me-3">
+                <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/48/ffffff/external-delivery-contactless-delivery-flatart-icons-outline-flatarticons.png" alt="delivery" width="34">
+              </div>
+              <div>
+                <h5 class="fw-bold text-white mb-1">Quick Delivery</h5>
+                <p class="text-white-50 mb-0">We expect to deliver goods that are safe and secure. Quick and fast delivery is the most vital feature of our company.</p>
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="col-12 d-flex">
+              <div class="iconbox flex-shrink-0 d-flex align-items-center justify-content-center me-3">
+                <img src="https://img.icons8.com/external-kiranshastry-flat-kiranshastry/64/ffffff/external-wallet-logistic-delivery-kiranshastry-flat-kiranshastry.png" alt="affordable" width="34">
+              </div>
+              <div>
+                <h5 class="fw-bold text-white mb-1">Affordable Prices</h5>
+                <p class="text-white-50 mb-0">We provide the simplest packing and moving services at reasonable prices. Our customers are our precious belongings, we never want their wallets to be harsh.</p>
+              </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="col-12 d-flex">
+              <div class="iconbox flex-shrink-0 d-flex align-items-center justify-content-center me-3">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/clock--v1.png" alt="24x7" width="33">
+              </div>
+              <div>
+                <h5 class="fw-bold text-white mb-1">24 X 7 Support</h5>
+                <p class="text-white-50 mb-0">
+                  We have an impressive team of customer relations executives who assist you with our quality services and help you to resolve all your packing and moving queries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container py-5">
+  <div class="row">
+    <div class="col-12 text-center mb-4">
+      <h4 class="fw-bold mb-2">Get in Touch with us</h4>
+      <p class="mb-3" style="max-width:600px;margin:auto;">
+        Whether you need assistance with air, sea, or land freight, our dedicated team is here to ensure your goods reach their destination efficiently and safely.
+      </p>
+    </div>
+    <div class="col-12 d-flex justify-content-center gap-3 flex-wrap mb-4">
+      <div class="text-center px-3">
+        <span class="fw-bolder" style="color:#0b2840;">+91 9810499121</span>
+      </div>
+      <div class="text-center px-3">
+        <span class="fw-bolder" style="color:#0b2840;">sr.relocationservices@gmail.com</span>
+      </div>
+      <div class="text-center px-3">
+        <span class="fw-bolder" style="color:#0b2840;">WZ283/309, MADDI WALI GALI 10, VISHNU GARDEN, NEW DELHI 110018.</span>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <!-- Map -->
+      <div class="col-lg-5 mb-4 mb-lg-0 d-flex justify-content-end">
+        <div class="ratio ratio-1x1 rounded shadow-sm border" style="max-width:370px; min-width:240px;">
+          <iframe src="https://www.google.com/maps?q=Shree+Radhey+relocation+services&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0; border-radius:15px;"></iframe>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="col-lg-5 d-flex justify-content-start">
+        <div class="contact-box p-4 rounded-4 shadow-sm w-100" style="background:#0b2840; max-width:370px;">
+          <h5 class="text-white mb-4 text-center fw-bold">Contact Us</h5>
+          <form>
+            <div class="row g-2">
+              <div class="col-6">
+                <input type="text" class="form-control form-control-lg bg-transparent border-secondary" placeholder="Name" required>
+              </div>
+              <div class="col-6">
+                <input type="email" class="form-control form-control-lg bg-transparent border-secondary" placeholder="Email" required>
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control form-control-lg bg-transparent border-secondary" placeholder="Phone No." required>
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control form-control-lg bg-transparent border-secondary" placeholder="City" required>
+              </div>
+              <div class="col-12 mb-2">
+                <textarea class="form-control form-control-lg bg-transparent border-secondary" rows="2" placeholder="Your Message" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn w-100 fw-semibold" style="background:#ff7000; color:#222; font-size:1.07rem; border-radius:8px;">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-footer-custom pt-5 pb-3">
+  <div class="container">
+    <div class="row gy-4 align-items-start">
+      <!-- About Us -->
+      <div class="col-lg-5">
+        <div class="footer-card p-4 mb-3 mb-lg-0 h-100">
+          <h5 class="fw-bold text-primary mb-2">About Us</h5>
+          <div class="footer-text mb-2" style="max-width: 420px;">
+            SR Relocation Services offers expert packing and moving services with over many years of experience. Reliable, efficient, and affordable relocation solutions tailored for you.
+          </div>
+          <div class="footer-copy mt-2 mb-0">
+            &copy; 2025 SR Relocation Services. All rights reserved.
+          </div>
+        </div>
+      </div>
+      <!-- Quick Links Centered -->
+      <div class="col-lg-4 d-flex flex-column align-items-center">
+        <div class="footer-card p-4 h-100 w-100 text-left">
+          <h5 class="fw-bold text-primary mb-2">Quick Links</h5>
+          <ul class="list-unstyled m-0">
+            <li><a href="#" class="footer-link">Home</a></li>
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Our Services</a></li>
+            <li><a href="#" class="footer-link">Our Projects</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Social: Visit Us On -->
+      <div class="col-lg-3 d-flex flex-column align-items-lg-end align-items-center">
+        <div class="footer-card p-4 h-100 w-100 d-flex flex-column align-items-lg-end align-items-center text-left">
+          <h6 class="fw-bold text-primary mb-2">Visit Us On</h6>
+          <div class="footer-socials mt-2">
+            <a target="_blank" href="https://www.facebook.com/Srrelocation/" class="footer-social me-2"><i class="bi bi-facebook"></i></a>
+            <a target="_blank" href="https://www.instagram.com/sr.relocationservices/?hl=en" class="footer-social me-2"><i class="bi bi-instagram"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/company/shree-radhey-relocation-services" class="footer-social"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
